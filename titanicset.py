@@ -9,6 +9,7 @@ test = pd.read_csv(train_url)
 #Print the `head` of the train and test dataframes
 print(train.head())
 print(test.head())
+
 # Passengers that survived vs passengers that passed away
 print(train["Survived"].value_counts())
 
@@ -26,3 +27,13 @@ print(train["Survived"][train["Sex"] == 'male'].value_counts(normalize =True))
 
 # Normalized female survival
 print(train["Survived"][train["Sex"] == 'female'].value_counts(normalize =True))
+
+print("--------------training set--------------")
+print(train.describe())
+print("--------------training shape--------------")
+print(train.shape)
+print("--------------testing set--------------")
+print(test.describe())
+print("--------------testing shape--------------")
+print(test.shape)
+
